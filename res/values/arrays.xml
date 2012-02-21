@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="types">
+        <item>优惠</item>
+        <item>团购</item>
+        <item>商家</item>
+    </string-array>
+    <string-array name="short_types">
+        <item>优惠</item>
+        <item>团购</item>
+        <item>商家</item>
+    </string-array>
+    <string-array name="search_types">
+        <item>全部</item>
+        <item>优惠</item>
+        <item>团购</item>
+        <item>商家</item>
+    </string-array>
+    <string-array name="search_keywords">
+        <item>全部分类</item>
+        <item>餐饮美食</item>
+        <item>休闲娱乐</item>
+        <item>美容化妆</item>
+        <item>生活购物</item>
+        <item>运动健身</item>
+        <item>旅游酒店</item>
+        <item>婚庆</item>
+        <item>生活服务</item>
+    </string-array>
+    <string-array name="distances">
+        <item>500米</item>
+        <item>1公里</item>
+        <item>2公里</item>
+        <item>3公里</item>
+        <item>5公里</item>
+    </string-array>
+</resources>

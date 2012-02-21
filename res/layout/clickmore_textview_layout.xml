@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/moretextview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="7.0dip"
+    android:paddingLeft="5.0dip"
+    android:paddingTop="7.0dip"
+    android:text="点击查看更多…"
+    android:textColor="@color/yellow"
+    android:textSize="16.0dip" />

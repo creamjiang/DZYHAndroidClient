@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_item_height">40.0dip</dimen>
+    <dimen name="textsize">19.0dip</dimen>
+    <dimen name="tinysize">9.0dip</dimen>
+    <dimen name="smallsize">17.0dip</dimen>
+    <dimen name="tagsize">13.0dip</dimen>
+    <dimen name="bigsize">23.0dip</dimen>
+</resources>

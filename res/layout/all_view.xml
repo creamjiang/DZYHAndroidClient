@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dld.coupon.view.AllLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff4f4f4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="top|center"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="320.0dip"
+            android:layout_height="53.0dip"
+            android:background="@drawable/listhead_recommend" >
+
+            <TextView
+                android:id="@id/address_button"
+                android:layout_width="123.0dip"
+                android:layout_height="37.0dip"
+                android:layout_gravity="top|left|center"
+                android:layout_marginLeft="4.0dip"
+                android:layout_marginTop="4.0dip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="3.0dip"
+                android:paddingRight="10.0dip"
+                android:singleLine="true"
+                android:text="全北京"
+                android:textColor="#ffffffff"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@id/keyword_spinner"
+                android:layout_width="119.0dip"
+                android:layout_height="37.0dip"
+                android:layout_gravity="top|left|center"
+                android:layout_marginLeft="120.0dip"
+                android:layout_marginTop="4.0dip"
+                android:gravity="center"
+                android:paddingBottom="3.0dip"
+                android:paddingRight="10.0dip"
+                android:text="全部分类"
+                android:textColor="#ffffffff"
+                android:textSize="16.0dip" />
+
+            <ImageView
+                android:id="@id/refresh"
+                android:layout_width="70.0dip"
+                android:layout_height="36.0dip"
+                android:layout_gravity="top|left|center"
+                android:layout_marginLeft="244.0dip"
+                android:layout_marginTop="4.0dip"
+                android:padding="8.0dip"
+                android:src="@drawable/refresh" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.dld.coupon.view.DownloadListView
+                android:id="@id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#fff4f4f4"
+                android:divider="@drawable/list_seperator"
+                android:dividerHeight="2.0dip" />
+
+            <include layout="@layout/address_list" />
+
+            <include layout="@layout/category_list" />
+        </FrameLayout>
+
+        <include
+            android:id="@id/no_result"
+            layout="@layout/download_list_footer"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</com.dld.coupon.view.AllLinearLayout>

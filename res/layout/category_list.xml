@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="top|left|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="108.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dld.coupon.view.CategoryList android:layout_gravity="top|left|center" android:id="@id/categorylist" android:background="#ffffffe0" android:visibility="gone" android:layout_width="140.0dip" android:layout_height="wrap_content" android:cacheColorHint="#ffffffe0" android:childDivider="@drawable/line" android:divider="@drawable/line" android:dividerHeight="1.0dip" />
+    <LinearLayout android:layout_gravity="top|left|center" android:orientation="horizontal" android:id="@id/scrolling_category" android:background="@drawable/list_header_bg_0" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:layout_width="140.0dip" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="left" android:id="@id/category_item_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="2.0dip" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="right|center" android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:src="@drawable/down_small" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="收藏同时转发微博" android:key="key_storeand_send" android:defaultValue="true" android:summaryOn="开启" android:summaryOff="关闭" />
+</PreferenceScreen>

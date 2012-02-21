@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="44.0dip"
+    android:background="@drawable/list_header_bg" >
+
+    <Button
+        android:id="@id/feedback_button"
+        android:layout_width="70.0dip"
+        android:layout_height="28.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="4.0dip"
+        android:background="@drawable/choice_btn"
+        android:paddingBottom="3.0dip"
+        android:textColor="@color/white"
+        android:textSize="14.0dip"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="7.0dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/title"
+        android:textColor="@color/white"
+        android:textSize="20.0dip" />
+
+    <Button
+        android:id="@id/set_button"
+        android:layout_width="44.666992dip"
+        android:layout_height="28.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="4.0dip"
+        android:background="@drawable/setting_btn"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@id/invite_top_btn"
+        android:layout_width="70.0dip"
+        android:layout_height="28.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="3.0dip"
+        android:background="@drawable/choice_btn"
+        android:paddingBottom="3.0dip"
+        android:text="邀请好友"
+        android:textColor="@color/white"
+        android:textSize="14.0dip"
+        android:visibility="gone" />
+
+</RelativeLayout>

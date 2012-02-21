@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffdf8a" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffdf8a"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingTop="8.0dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@id/couponimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/icon" />
+
+            <TextView
+                android:id="@id/detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@id/couponimage"
+                android:text="商户名称"
+                android:textColor="@color/textblue"
+                android:textSize="16.0dip" />
+
+            <TextView
+                android:id="@id/detail_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_name"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@id/couponimage"
+                android:text="商户地址"
+                android:textColor="@color/textblue"
+                android:textSize="15.0dip" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@id/comment_field"
+            android:layout_width="fill_parent"
+            android:layout_height="260.0dip"
+            android:layout_marginTop="10.0dip"
+            android:editable="true"
+            android:gravity="top"
+            android:hint="请输入您的评论"
+            android:maxLength="500"
+            android:singleLine="false" />
+
+        <CheckBox
+            android:id="@id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同步到新浪微博"
+            android:textColor="@color/textcoffee" />
+
+        <Button
+            android:id="@id/comment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:paddingLeft="25.0dip"
+            android:paddingRight="25.0dip"
+            android:text="评论"
+            android:textColor="@color/textcoffee"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+</ScrollView>

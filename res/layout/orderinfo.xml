@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <include
+        android:id="@id/top"
+        layout="@layout/top" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/ScrollView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10.0dip" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/list_containernopadding"
+                android:paddingBottom="10.0dip" >
+
+                <TextView
+                    android:id="@id/tip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:text="订单信息"
+                    android:textColor="@color/black"
+                    android:textSize="20.0sp" />
+
+                <RelativeLayout
+                    android:id="@id/projectnamelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/tip"
+                    android:background="#ffefefef" >
+
+                    <TextView
+                        android:id="@id/projectnametip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="项目名称："
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+
+                    <TextView
+                        android:id="@id/projectname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/projectnametip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_toRightOf="@id/projectnametip"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/yellow"
+                        android:textSize="18.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/unitpricelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/projectnamelayout"
+                    android:background="#ffefefef" >
+
+                    <TextView
+                        android:id="@id/unitpricetip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="单价 :"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+
+                    <TextView
+                        android:id="@id/unitprice"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/unitpricetip"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_toRightOf="@id/unitpricetip"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/freightchargelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/unitpricelayout"
+                    android:background="#ffefefef" >
+
+                    <TextView
+                        android:id="@id/freightchargetip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="运费 :"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+
+                    <TextView
+                        android:id="@id/freightcharge"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/freightchargetip"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_toRightOf="@id/freightchargetip"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/buynumberlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/freightchargelayout"
+                    android:background="#ffefefef" >
+
+                    <TextView
+                        android:id="@id/buynumbertip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="购买数量:"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+
+                    <EditText
+                        android:id="@id/buynumber"
+                        android:layout_width="120.0dip"
+                        android:layout_height="45.0dip"
+                        android:layout_alignTop="@id/buynumbertip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_toRightOf="@id/buynumbertip"
+                        android:maxLength="5"
+                        android:numeric="integer"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/shuominglayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/buynumberlayout"
+                    android:background="#ffefefef"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@id/shuomingtip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="说明:"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+
+                    <TextView
+                        android:id="@id/shuoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/shuomingtip"
+                        android:layout_toRightOf="@id/shuomingtip"
+                        android:textColor="#ff494949"
+                        android:textSize="18.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/needpost"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shuominglayout" >
+
+                    <RelativeLayout
+                        android:id="@id/sendaddresslayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/privateinfo"
+                            android:layout_marginLeft="5.0dip"
+                            android:text="配送地址"
+                            android:textColor="#ff494949"
+                            android:textSize="20.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/receivingaddresslayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/sendaddresslayout"
+                        android:layout_marginTop="5.0dip" >
+
+                        <RadioGroup
+                            android:id="@id/addressgroup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:orientation="vertical"
+                            android:textColor="#ff494949" >
+
+                            <RadioButton
+                                android:id="@id/first"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:checked="true"
+                                android:textColor="@color/dark_gray"
+                                android:visibility="gone" />
+
+                            <RadioButton
+                                android:id="@id/second"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:textColor="@color/dark_gray"
+                                android:visibility="gone" />
+
+                            <RadioButton
+                                android:id="@id/third"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:textColor="@color/dark_gray"
+                                android:visibility="gone" />
+                        </RadioGroup>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/addressgroup"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@id/addadress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@id/addressgroup"
+                                android:layout_marginLeft="3.0dip"
+                                android:layout_marginTop="10.0dip"
+                                android:text="@string/addhostaddress"
+                                android:textColor="@color/yellow"
+                                android:textSize="15.0dip" />
+
+                            <TextView
+                                android:id="@id/edit_addadress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/addadress"
+                                android:layout_marginLeft="3.0dip"
+                                android:layout_toRightOf="@id/addadress"
+                                android:text="@string/edit_hostaddress"
+                                android:textColor="@color/yellow"
+                                android:textSize="15.0dip" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/deliverytimelayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/receivingaddresslayout"
+                        android:layout_marginTop="10.0dip" >
+
+                        <TextView
+                            android:id="@id/deliverytimetip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5.0dip"
+                            android:text="送货时间"
+                            android:textColor="#ff494949"
+                            android:textSize="20.0sp" />
+
+                        <RadioGroup
+                            android:id="@id/deliverytime_radio"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/deliverytimetip"
+                            android:layout_marginLeft="5.0dip"
+                            android:orientation="vertical" >
+
+                            <RadioButton
+                                android:id="@id/only_workday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:checked="true"
+                                android:enabled="true"
+                                android:text="只工作日送货"
+                                android:textColor="@color/dark_gray" />
+
+                            <RadioButton
+                                android:id="@id/weekendorholiday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:text="只双休日假日送货"
+                                android:textColor="@color/dark_gray" />
+
+                            <RadioButton
+                                android:id="@id/other"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:text="白天没人其他时间送"
+                                android:textColor="@color/dark_gray" />
+
+                            <RadioButton
+                                android:id="@id/randomday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobutton"
+                                android:text="工作日双休日假日均可送货"
+                                android:textColor="@color/dark_gray" />
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/deliilluslyout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/deliverytimelayout"
+                        android:layout_marginTop="10.0dip" >
+
+                        <TextView
+                            android:id="@id/deliveryillustip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5.0dip"
+                            android:text="配送说明"
+                            android:textColor="#ff494949"
+                            android:textSize="20.0sp" />
+
+                        <EditText
+                            android:id="@id/deliveryillus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/deliveryillustip"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:hint="配送特殊说明，配送公司会尽量调节(限50字以内）"
+                            android:maxLength="50" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@id/additionlayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/deliilluslyout"
+                        android:layout_marginTop="5.0dip" >
+
+                        <TextView
+                            android:id="@id/additiontip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5.0dip"
+                            android:text="附言"
+                            android:textColor="#ff494949"
+                            android:textSize="20.0sp" />
+
+                        <EditText
+                            android:id="@id/additionalillus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@id/additiontip"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:hint="(限50字以内)"
+                            android:maxLength="50" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/mobilelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/needpost"
+                    android:layout_marginTop="5.0dip"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@id/mobiletip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:text="手机号码"
+                        android:textColor="@color/black"
+                        android:textSize="20.0sp" />
+
+                    <EditText
+                        android:id="@id/phonenumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/mobiletip"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:phoneNumber="true" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@id/next"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_below="@id/mobilelayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30.0dip"
+                    android:layout_marginRight="30.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/greenbuttonbg"
+                    android:text="下一步"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

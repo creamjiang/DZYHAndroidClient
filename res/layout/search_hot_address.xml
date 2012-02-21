@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@id/text_left_layout"
+        android:layout_width="100.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26.0dip" >
+
+        <TextView
+            android:id="@id/text_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7.0dip"
+            android:layout_marginTop="7.0dip"
+            android:ellipsize="end"
+            android:padding="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff5b5b5b"
+            android:textSize="15.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="126.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="left|center" >
+
+        <TextView
+            android:id="@id/text_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7.0dip"
+            android:layout_marginTop="7.0dip"
+            android:ellipsize="end"
+            android:padding="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff5b5b5b"
+            android:textSize="15.0dip" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_left_layout"
+        layout="@layout/list_seperator" />
+
+</RelativeLayout>

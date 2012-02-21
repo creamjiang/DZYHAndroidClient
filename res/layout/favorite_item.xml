@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff" >
+
+    <ImageView
+        android:id="@id/coupon_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@id/coupon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/coupon_image"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/coupon_image"
+        android:singleLine="true"
+        android:textColor="#ff00318c"
+        android:textSize="18.0dip" />
+
+    <TextView
+        android:id="@id/coupon_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/coupon_name"
+        android:layout_below="@id/coupon_name"
+        android:layout_toRightOf="@id/coupon_image"
+        android:singleLine="true"
+        android:textColor="@color/yellow"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/download_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/coupon_name"
+        android:layout_marginLeft="3.0dip"
+        android:layout_toRightOf="@id/coupon_discount"
+        android:singleLine="true"
+        android:textColor="@color/textgray"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/coupon_name"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/coupon_discount"
+        android:layout_marginLeft="5.0dip"
+        android:singleLine="true"
+        android:textColor="@color/textgray"
+        android:textSize="14.0dip" />
+
+</RelativeLayout>

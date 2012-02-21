@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingBottom="3.0dip"
+    android:paddingTop="3.0dip" >
+
+    <ImageView
+        android:id="@id/ticket_image"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5.0dip"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@id/ticket_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/coupon_image"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/ticket_image"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff2a2a2a"
+        android:textSize="18.0dip" />
+
+    <TextView
+        android:id="@id/ticket_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ticket_title"
+        android:layout_below="@id/ticket_title"
+        android:layout_toLeftOf="@id/coupon_distance"
+        android:textColor="#ff434343"
+        android:textSize="14.0dip" />
+
+</RelativeLayout>

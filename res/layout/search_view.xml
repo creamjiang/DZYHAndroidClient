@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff0f0f0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/list_header_bg" >
+
+        <TextView
+            android:id="@id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="7.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="首页"
+            android:textColor="@color/white"
+            android:textSize="20.0dip" />
+
+        <Button
+            android:id="@id/kuaican_top_btn"
+            android:layout_width="70.0dip"
+            android:layout_height="28.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/choice_btn"
+            android:paddingBottom="3.0dip"
+            android:text="快餐"
+            android:textColor="@color/white"
+            android:textSize="14.0dip" />
+
+        <Button
+            android:id="@id/invite_top_btn"
+            android:layout_width="70.0dip"
+            android:layout_height="28.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/choice_btn"
+            android:paddingBottom="3.0dip"
+            android:text="邀请好友"
+            android:textColor="@color/white"
+            android:textSize="14.0dip" />
+    </RelativeLayout>
+
+    <include
+        android:id="@id/search_bar"
+        layout="@layout/search_bar" />
+
+    <android.widget.SearchScrollView
+        android:id="@id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:paddingBottom="5.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.dld.android.view.DragViewGroup
+                android:id="@id/activities"
+                android:layout_width="fill_parent"
+                android:layout_height="55.329987dip"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@id/categories"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="15.0dip"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="4.0dip" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="13.329987dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shade_seprator" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/hot_addresses"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@id/no_result"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="310.0dip"
+                    android:layout_height="51.329987dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/no_hot_address"
+                    android:gravity="left|center"
+                    android:paddingLeft="20.0dip"
+                    android:text="抱歉~暂未找到附近商圈哦"
+                    android:textColor="#fff28100"
+                    android:textSize="15.0dip" />
+            </LinearLayout>
+
+            <com.dld.android.view.DragControl
+                android:id="@id/ads"
+                android:layout_width="fill_parent"
+                android:layout_height="78.665985dip"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:layout_marginTop="5.0dip" >
+
+                <RelativeLayout
+                    android:layout_width="106.0dip"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/activity_1"
+                        android:layout_width="99.33298dip"
+                        android:layout_height="78.665985dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ffffffff"
+                        android:src="@drawable/ad_1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="106.0dip"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/activity_2"
+                        android:layout_width="99.33298dip"
+                        android:layout_height="78.665985dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ffffffff"
+                        android:src="@drawable/ad_2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="106.0dip"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/activity_3"
+                        android:layout_width="99.33298dip"
+                        android:layout_height="78.665985dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ffffffff"
+                        android:src="@drawable/ad_3" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="106.0dip"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/activity_4"
+                        android:layout_width="99.33298dip"
+                        android:layout_height="78.665985dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ffffffff"
+                        android:src="@drawable/ad_4" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="106.0dip"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/activity_5"
+                        android:layout_width="99.33298dip"
+                        android:layout_height="78.665985dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ffffffff"
+                        android:src="@drawable/ad_5" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="106.0dip"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/activity_6"
+                        android:layout_width="99.33298dip"
+                        android:layout_height="78.665985dip"
+                        android:layout_centerHorizontal="true"
+                        android:background="#ffffffff"
+                        android:src="@drawable/ad_6" />
+                </RelativeLayout>
+            </com.dld.android.view.DragControl>
+        </LinearLayout>
+    </android.widget.SearchScrollView>
+
+</LinearLayout>

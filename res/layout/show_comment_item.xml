@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:background="@drawable/coupon_detail_bg2_body" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15.0dip" >
+
+            <RelativeLayout
+                android:id="@id/name_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip" >
+
+                <TextView
+                    android:id="@id/name"
+                    android:layout_width="80.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:textColor="#ff4c4c4c"
+                    android:textSize="15.0dip" />
+
+                <RatingBar
+                    android:id="@id/item_rating"
+                    style="@style/rating_small_yellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/name"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/name" />
+
+                <TextView
+                    android:id="@id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/item_rating"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:maxLines="2"
+                    android:text="2011-12-11"
+                    android:textColor="#ff4c4c4c" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/name_layout"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:textColor="#ff4c4c4c"
+                android:textSize="15.0dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@id/location_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/location_text"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/local_bottom_banner"
+        android:textSize="16.0dip" />
+
+    <com.dld.android.map.MapViewWrapper
+        android:id="@id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/location_text"
+        android:apiKey="0PmNmpWdF5g0zz7k2tlxQWrCiKRR_6b2pY_b5-g" />
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="4.0dip"
+    android:paddingTop="2.0dip" >
+
+    <ImageView
+        android:id="@id/coupon_image"
+        android:layout_width="84.0dip"
+        android:layout_height="84.0dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5.0dip"
+        android:background="@drawable/coupon_item"
+        android:padding="7.0dip"
+        android:src="@drawable/store" />
+
+    <TextView
+        android:id="@id/coupon_name"
+        android:layout_width="180.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ff2a2a2a"
+        android:textSize="18.0dip" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/coupon_name"
+        android:layout_marginLeft="6.0dip"
+        android:layout_toRightOf="@id/coupon_name" >
+
+        <ImageView
+            android:id="@id/icon_coupon"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginRight="4.0dip"
+            android:src="@drawable/icon_coupon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/icon_bank"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginRight="4.0dip"
+            android:src="@drawable/icon_bank"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/coupon_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6.0dip" >
+
+        <ImageView
+            android:id="@id/icon_song"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:src="@drawable/icon_give"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/icon_sheng"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:src="@drawable/icon_save"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/icon_zhe"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:src="@drawable/icon_discount"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/coupon_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/coupon_name"
+        android:layout_below="@id/coupon_name"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_toLeftOf="@id/coupon_distance"
+        android:layout_weight="1.0"
+        android:singleLine="true"
+        android:textColor="#ff767676"
+        android:textSize="16.0dip" />
+
+    <ImageView
+        android:layout_width="7.0dip"
+        android:layout_height="11.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/coupon_name"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="8.0dip"
+        android:src="@drawable/jt" />
+
+    <TextView
+        android:id="@id/coupon_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/coupon_address"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_weight="1.0"
+        android:singleLine="true"
+        android:textColor="#ff767676"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/coupon_distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/coupon_address"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="2.0dip"
+        android:layout_weight="1.0"
+        android:singleLine="true"
+        android:textColor="#ff767676"
+        android:textSize="14.0dip" />
+
+</RelativeLayout>

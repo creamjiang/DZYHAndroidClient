@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:paddingBottom="8.0dip"
+    android:paddingTop="8.0dip" >
+
+    <TextView
+        android:id="@id/single_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10.0dip"
+        android:textSize="@dimen/textsize" />
+
+    <ImageView
+        android:id="@id/cityImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10.0dip"
+        android:src="@drawable/check"
+        android:visibility="gone" />
+
+</RelativeLayout>

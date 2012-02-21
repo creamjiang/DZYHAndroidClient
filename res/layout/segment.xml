@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60.0dip"
+    android:background="@drawable/menu_bg" >
+
+    <com.dld.coupon.view.BottomTabGroup
+        android:id="@id/bottom_button_group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="left" >
+
+        <include
+            android:id="@id/button_arround"
+            layout="@layout/bottom_tab_button" />
+
+        <include
+            android:id="@id/button_recommand"
+            layout="@layout/bottom_tab_button" />
+
+        <include
+            android:id="@id/button_more"
+            layout="@layout/bottom_tab_button" />
+
+        <include
+            android:id="@id/button_group"
+            layout="@layout/bottom_tab_button" />
+
+        <include
+            android:id="@id/button_store"
+            layout="@layout/bottom_tab_button" />
+    </com.dld.coupon.view.BottomTabGroup>
+
+</LinearLayout>

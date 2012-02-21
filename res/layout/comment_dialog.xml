@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dld.coupon.view.InputCommentDialogLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="3.0dip"
+    android:paddingRight="3.0dip" >
+
+    <EditText
+        android:id="@id/edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left|center"
+        android:hint="您想说些什么?"
+        android:lines="5" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <CheckBox
+            android:id="@id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/check_box"
+            android:text="同步到社会化网站" />
+
+        <Button
+            android:id="@id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="清除" />
+    </RelativeLayout>
+
+</com.dld.coupon.view.InputCommentDialogLinearLayout>

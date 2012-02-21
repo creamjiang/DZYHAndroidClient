@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dld.coupon.view.GroupDetailView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2.0dip" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="359.0dip"
+                    android:src="@drawable/tuan_top_bg" />
+
+                <TextView
+                    android:id="@id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left|center"
+                    android:layout_marginLeft="25.0dip"
+                    android:textColor="@color/white"
+                    android:textSize="24.0dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@id/bought"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right|center"
+                    android:layout_marginRight="92.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:textColor="@color/orange"
+                    android:textSize="20.0dip" />
+
+                <ImageView
+                    android:id="@id/couponimage"
+                    android:layout_width="289.0dip"
+                    android:layout_height="182.0dip"
+                    android:layout_gravity="top|left|center"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginTop="50.0dip"
+                    android:background="@drawable/group_image"
+                    android:padding="8.0dip"
+                    android:src="@drawable/store" />
+
+                <TextView
+                    android:id="@id/left"
+                    android:layout_width="285.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_gravity="top|left|center"
+                    android:layout_marginLeft="18.0dip"
+                    android:layout_marginTop="208.0dip"
+                    android:background="#90000000"
+                    android:paddingLeft="10.0dip"
+                    android:textColor="@color/white"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:id="@id/description"
+                    android:layout_width="280.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left|center"
+                    android:layout_marginLeft="22.0dip"
+                    android:layout_marginTop="230.0dip"
+                    android:lineSpacingExtra="4.0dip"
+                    android:paddingLeft="4.0dip"
+                    android:textColor="#ff606060"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@id/discount_text"
+                    android:layout_width="200.0dip"
+                    android:layout_height="60.0dip"
+                    android:layout_gravity="top|left|center"
+                    android:layout_marginLeft="22.0dip"
+                    android:layout_marginTop="296.0dip"
+                    android:paddingLeft="6.0dip"
+                    android:textColor="#ff606060"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@id/value_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left|center"
+                    android:layout_marginLeft="72.0dip"
+                    android:layout_marginTop="296.0dip"
+                    android:textColor="#ff606060"
+                    android:textSize="16.0dip"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@id/buy"
+                    android:layout_width="140.0dip"
+                    android:layout_height="38.0dip"
+                    android:layout_gravity="bottom|right|center"
+                    android:layout_marginBottom="23.0dip"
+                    android:layout_marginRight="25.0dip"
+                    android:background="@drawable/tuan_buy"
+                    android:gravity="center"
+                    android:text="立即抢购"
+                    android:textSize="16.0dip"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@id/shops"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6.0dip"
+                android:background="@drawable/block"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:orientation="horizontal"
+                    android:padding="5.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center" >
+
+                            <Button
+                                android:id="@id/favorite_button"
+                                android:layout_width="87.32999dip"
+                                android:layout_height="34.669983dip"
+                                android:background="@drawable/fav" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center" >
+
+                            <Button
+                                android:id="@id/email_button"
+                                android:layout_width="87.32999dip"
+                                android:layout_height="34.669983dip"
+                                android:background="@drawable/team" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center" >
+
+                            <Button
+                                android:id="@id/weibo_button"
+                                android:layout_width="87.32999dip"
+                                android:layout_height="34.669983dip"
+                                android:background="@drawable/weibo" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="#ffefefef" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="7.0dip"
+                        android:text="卖家信息"
+                        android:textColor="#fff29944"
+                        android:textSize="18.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/shop_empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10.0dip"
+                        android:text="暂无"
+                        android:textColor="#ff606060"
+                        android:textSize="18.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="65.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:background="@drawable/white_container" >
+
+                <Button
+                    android:id="@id/bottom_feedback_btn"
+                    android:layout_width="246.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/report_error"
+                    android:textColor="#ffffffff"
+                    android:textSize="16.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</com.dld.coupon.view.GroupDetailView>

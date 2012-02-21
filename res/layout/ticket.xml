@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dld.coupon.view.TicketView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginLeft="6.0dip"
+        android:layout_marginRight="6.0dip"
+        android:layout_marginTop="3.0dip" >
+
+        <LinearLayout
+            android:layout_width="308.0dip"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ticket_bg_1"
+                android:paddingBottom="15.0dip" >
+
+                <TextView
+                    android:id="@id/ticket_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7.0dip"
+                    android:textColor="#fff48700"
+                    android:textSize="15.0dip" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff4f4f4"
+                android:padding="10.0dip" >
+
+                <FrameLayout
+                    android:layout_width="102.0dip"
+                    android:layout_height="102.0dip" >
+
+                    <ImageView
+                        android:id="@id/image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/white_border"
+                        android:padding="5.0dip"
+                        android:src="@drawable/store" />
+
+                    <ImageView
+                        android:id="@id/zoom_image"
+                        android:layout_width="33.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_gravity="bottom|right|center"
+                        android:layout_marginBottom="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:src="@drawable/zoom" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@id/distance_image"
+                        android:layout_width="7.0dip"
+                        android:layout_height="11.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="6.0dip"
+                        android:src="@drawable/distance" />
+
+                    <TextView
+                        android:id="@id/shop_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1.0dip"
+                        android:layout_toRightOf="@id/distance_image"
+                        android:textColor="#ff4c4c4c"
+                        android:textSize="14.0dip" />
+
+                    <ImageView
+                        android:id="@id/time_image"
+                        android:layout_width="11.0dip"
+                        android:layout_height="11.0dip"
+                        android:layout_below="@id/shop_address"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginTop="6.0dip"
+                        android:src="@drawable/time" />
+
+                    <TextView
+                        android:id="@id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shop_address"
+                        android:layout_marginTop="1.0dip"
+                        android:layout_toRightOf="@id/time_image"
+                        android:textColor="#ff4c4c4c"
+                        android:textSize="14.0dip" />
+
+                    <ImageView
+                        android:id="@id/source_image"
+                        android:layout_width="11.0dip"
+                        android:layout_height="11.0dip"
+                        android:layout_below="@id/time_image"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:src="@drawable/source" />
+
+                    <TextView
+                        android:id="@id/source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time_image"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_toRightOf="@id/source_image"
+                        android:textColor="#ff4c4c4c"
+                        android:textSize="14.0dip" />
+
+                    <ImageView
+                        android:id="@id/tel_image"
+                        android:layout_width="10.666992dip"
+                        android:layout_height="10.666992dip"
+                        android:layout_below="@id/source_image"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:src="@drawable/tel_small" />
+
+                    <TextView
+                        android:id="@id/shop_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/source_image"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_toRightOf="@id/tel_image"
+                        android:autoLink="phone"
+                        android:textColor="#ff4c4c4c"
+                        android:textSize="14.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="68.0dip"
+                android:background="@drawable/ticket_bg_2"
+                android:orientation="horizontal"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:paddingTop="18.0dip" >
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@id/favorite_button"
+                            android:layout_width="87.32999dip"
+                            android:layout_height="34.669983dip"
+                            android:background="@drawable/fav" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@id/email_button"
+                            android:layout_width="87.32999dip"
+                            android:layout_height="34.669983dip"
+                            android:background="@drawable/team" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@id/share_button"
+                            android:layout_width="87.32999dip"
+                            android:layout_height="34.669983dip"
+                            android:background="@drawable/weibo" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="42.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/ticket_bg_3" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff4f4f4"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip" >
+
+                <TextView
+                    android:id="@id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff4c4c4c"
+                    android:textSize="14.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="7.0dip"
+                android:background="@drawable/ticket_bg_4" />
+        </LinearLayout>
+    </ScrollView>
+
+</com.dld.coupon.view.TicketView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffdf8a" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingTop="8.0dip" >
+
+        <TextView
+            android:id="@id/amount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:text="您的银行卡卡号："
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@id/mail_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:editable="true"
+            android:hint="您的银行卡卡号"
+            android:inputType="number"
+            android:maxLength="50"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:text="*支持建行、招行、交行、邮政、中信、农行、兴业、华夏、深发等银行借记卡\n*请输入本人的银行卡号码。银行卡持卡人姓名与支付人姓名必须保持一致，否则会支付失败。"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:text="您的手机号码："
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@id/password_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:editable="true"
+            android:hint="您的手机号码"
+            android:inputType="number"
+            android:maxLength="50"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:text="银联客服： 04006577577"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15.0dip"
+            android:autoLink="all"
+            android:text="提醒：\n1,银行卡在线支付由中国银联提供，使用借记卡即可通过手机完成支付！\n2,提交信息后，您的手机将收到银联02096585的来电，按语音电话提示输入银行卡密码完成支付！"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@id/feedback_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:paddingBottom="5.0dip"
+            android:paddingLeft="25.0dip"
+            android:paddingRight="25.0dip"
+            android:text="确认支付"
+            android:textColor="@color/textcoffee"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+</ScrollView>

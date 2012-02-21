@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/noresult" />
+
+    <TextView
+        android:id="@id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无查询结果"
+        android:textColor="@color/textgray" />
+
+    <Button
+        android:id="@id/updatelist_networkerr_button"
+        android:layout_width="60.0dip"
+        android:layout_height="40.0dip"
+        android:text="重试" />
+
+</LinearLayout>

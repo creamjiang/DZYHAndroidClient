@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/location_success_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/order_total"
+            android:layout_width="fill_parent"
+            android:layout_height="41.299988dip"
+            android:background="@drawable/listhead_orders"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff434343"
+            android:textSize="14.0dip" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginRight="6.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/orderlist_container" />
+
+            <TextView
+                android:id="@id/all_orders"
+                android:layout_width="154.0dip"
+                android:layout_height="38.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/tab_selected"
+                android:gravity="center"
+                android:textColor="#ffe37600"
+                android:textSize="20.0dip" />
+
+            <TextView
+                android:id="@id/unpaid_orders"
+                android:layout_width="154.0dip"
+                android:layout_height="38.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/tab_unselected"
+                android:gravity="center"
+                android:textColor="#ff474747"
+                android:textSize="20.0dip" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="70.0dip" >
+
+                <include
+                    android:id="@id/all_orders_list"
+                    layout="@layout/download_listview" />
+
+                <include
+                    android:id="@id/unpaid_orders_list"
+                    layout="@layout/download_listview"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@id/noresult_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@id/no_result"
+                        android:layout_width="146.69998dip"
+                        android:layout_height="135.29999dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50.0dip"
+                        android:src="@drawable/no_result"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@id/login_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/no_result"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/loginbtn_bg"
+                        android:text="登录"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

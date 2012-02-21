@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10.0dip"
+    android:paddingTop="10.0dip" >
+
+    <ImageView
+        android:id="@id/activity_img"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/white_border"
+        android:padding="5.0dip"
+        android:src="@drawable/store" />
+
+    <TextView
+        android:id="@id/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/activity_img"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ff4d4d4d"
+        android:textSize="16.0dip" />
+
+    <TextView
+        android:id="@id/activity_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_title"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_toRightOf="@id/activity_img"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ff9a9a9a"
+        android:textSize="12.0dip" />
+
+    <ImageView
+        android:layout_width="10.0dip"
+        android:layout_height="14.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0dip"
+        android:src="@drawable/jt2" />
+
+</RelativeLayout>

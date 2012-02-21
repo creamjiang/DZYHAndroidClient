@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/currentlocationlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include
+            android:id="@id/city_subtitle"
+            layout="@layout/subtitle" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@id/public_city_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="#ffffffff"
+        android:cacheColorHint="#ffffffff"
+        android:childDivider="@drawable/line"
+        android:divider="@drawable/line"
+        android:dividerHeight="1.0dip" />
+
+</LinearLayout>

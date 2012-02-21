@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff4f4f4"
+    android:orientation="horizontal"
+    android:paddingBottom="11.299988dip"
+    android:paddingLeft="15.0dip"
+    android:paddingTop="12.0dip" >
+
+    <TextView
+        android:id="@id/product"
+        android:layout_width="220.0dip"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff4a4a4a"
+        android:textSize="12.0dip" />
+
+    <TextView
+        android:id="@id/state"
+        android:layout_width="66.0dip"
+        android:layout_height="18.699982dip"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="10.0dip"
+        android:textColor="#ffffffff"
+        android:textSize="12.0dip" />
+
+    <TextView
+        android:id="@id/website"
+        android:layout_width="50.0dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product"
+        android:layout_marginTop="5.0dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ff5e950f"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/quantity"
+        android:layout_width="30.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/website"
+        android:layout_toRightOf="@id/website"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="1份"
+        android:textColor="#ff8c8c8c"
+        android:textSize="12.0dip" />
+
+    <TextView
+        android:id="@id/amount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/website"
+        android:layout_toRightOf="@id/quantity"
+        android:text="总价："
+        android:textColor="#ff8c8c8c"
+        android:textSize="12.0dip" />
+
+    <TextView
+        android:id="@id/amount"
+        android:layout_width="60.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/website"
+        android:layout_toRightOf="@id/amount_label"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#fff17e00"
+        android:textSize="12.0dip" />
+
+</RelativeLayout>

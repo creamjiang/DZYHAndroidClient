@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/main_layouot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/list_header_bg3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="7.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/title"
+                android:textColor="@color/white"
+                android:textSize="20.0dip" />
+        </RelativeLayout>
+
+        <include layout="@layout/view_group" />
+    </LinearLayout>
+
+    <include
+        android:id="@id/segment"
+        layout="@layout/segment" />
+
+</LinearLayout>

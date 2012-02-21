@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff4f4f4"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/location_success_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@id/myfav_headerlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/myfav_header"
+            android:orientation="horizontal"
+            android:weightSum="4.0" >
+
+            <RelativeLayout
+                android:id="@id/youhuilayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@id/youhuitv"
+                    android:layout_width="71.32999dip"
+                    android:layout_height="34.669983dip"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="优惠"
+                    android:textColor="@color/black"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/grouplayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@id/grouptv"
+                    android:layout_width="71.32999dip"
+                    android:layout_height="34.669983dip"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="团购"
+                    android:textColor="@color/black"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/storelayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@id/storetv"
+                    android:layout_width="71.32999dip"
+                    android:layout_height="34.669983dip"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="商家"
+                    android:textColor="@color/black"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/banklayout"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6.0dip"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@id/banktv"
+                    android:layout_width="71.32999dip"
+                    android:layout_height="34.669983dip"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="卡优惠"
+                    android:textColor="@color/black"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@id/no_result"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="6.0dip"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@id/unlogin_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80.0dip"
+                android:src="@drawable/not_found" />
+
+            <Button
+                android:id="@id/login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unlogin_img"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/loginbtn_bg"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.dld.coupon.view.DownloadListView
+            android:id="@id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="#fff4f4f4"
+            android:cacheColorHint="#fff4f4f4"
+            android:divider="@drawable/list_seperator"
+            android:dividerHeight="2.0dip"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+</LinearLayout>

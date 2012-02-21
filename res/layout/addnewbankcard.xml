@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <include
+        android:id="@id/top"
+        layout="@layout/top" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:padding="5.0dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_container"
+            android:padding="10.0dip" >
+
+            <TextView
+                android:id="@id/addbankcardtip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="新增银行卡"
+                android:textColor="@color/black"
+                android:textSize="20.0sp" />
+
+            <RadioGroup
+                android:id="@id/bankcardtype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addbankcardtip"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@id/yinglangrb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radiobutton"
+                    android:checked="true"
+                    android:text="银行卡"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18.0sp" />
+
+                <RadioButton
+                    android:id="@id/creditcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:button="@drawable/radiobutton"
+                    android:text="信用卡"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18.0sp" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/bankcardtype" >
+
+                <TextView
+                    android:id="@id/opencountaddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="开户银行所在省/市"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="15.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/opencountaddress"
+                    android:layout_marginTop="5.0dip" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="top|center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@id/address_button"
+                                android:layout_width="140.0dip"
+                                android:layout_height="40.0dip"
+                                android:layout_gravity="top|left|center"
+                                android:background="@drawable/dropdownwhitebg"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="选择省市"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="16.0dip" />
+
+                            <Spinner
+                                android:id="@id/depositofbank"
+                                android:layout_width="140.0dip"
+                                android:layout_height="40.0dip"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="top|left|center"
+                                android:layout_marginLeft="10.0dip"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="16.0dip" />
+
+                            <Spinner
+                                android:id="@id/creditbank"
+                                android:layout_width="140.0dip"
+                                android:layout_height="40.0dip"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="10.0dip"
+                                android:ellipsize="end"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="16.0dip"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@id/scrolling_district"
+                            android:layout_width="140.0dip"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/list_header_bg"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@id/city_item_title"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6.0dip"
+                                android:layout_marginTop="2.0dip"
+                                android:layout_weight="1.0"
+                                android:gravity="left"
+                                android:textColor="@color/white"
+                                android:textSize="20.0dip" />
+
+                            <ImageView
+                                android:id="@id/indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center"
+                                android:layout_marginRight="15.0dip"
+                                android:src="@drawable/down_small" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@id/scrolling_district"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@id/idcard"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:hint="银行卡号"
+                                android:singleLine="true" />
+
+                            <EditText
+                                android:id="@id/name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/idcard"
+                                android:layout_marginRight="10.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:hint="开户人姓名"
+                                android:singleLine="true" />
+
+                            <EditText
+                                android:id="@id/identitycard"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/name"
+                                android:layout_marginRight="10.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:hint="身份证号码"
+                                android:singleLine="true" />
+
+                            <EditText
+                                android:id="@id/mobile"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/identitycard"
+                                android:layout_marginRight="10.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:hint="请输入开户人银行预留手机号，才可以成功下单哦"
+                                android:phoneNumber="true"
+                                android:singleLine="true" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="提示:"
+                                    android:textColor="@color/red" />
+
+                                <TextView
+                                    android:id="@id/tip"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@id/sava_info"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40.0dip"
+                                android:layout_below="@id/userinfo_layout"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15.0dip"
+                                android:background="@drawable/greenbuttonbg"
+                                android:text="保存并使用" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

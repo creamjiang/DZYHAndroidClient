@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ProgressBar android:id="@android:id/progress" android:layout_width="63.0px" android:layout_height="64.0px" style="@style/animStyle" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/yellow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="载入中" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@id/top"
+        layout="@layout/top" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top"
+        android:background="@drawable/bg"
+        android:padding="10.0dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/list_container"
+            android:padding="10.0dip" >
+
+            <TextView
+                android:id="@id/tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="新增地址"
+                android:textColor="@color/black"
+                android:textSize="20.0sp" />
+
+            <LinearLayout
+                android:id="@id/adresslayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tip"
+                android:layout_marginTop="20.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="省市:"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:id="@id/provandcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京市-"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:id="@id/modify_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_city"
+                    android:textColor="@color/yellow"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/userinfo_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adresslayout"
+                android:layout_marginTop="20.0dip" >
+
+                <EditText
+                    android:id="@id/detail_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:hint="详细地址" />
+
+                <EditText
+                    android:id="@id/postcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/detail_address"
+                    android:hint="邮政编码" />
+
+                <EditText
+                    android:id="@id/customer_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/postcode"
+                    android:hint="收货人姓名" />
+
+                <EditText
+                    android:id="@id/customer_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/customer_name"
+                    android:hint="收货人手机号码" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@id/sava_info"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_below="@id/userinfo_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/greenbuttonbg"
+                android:text="保存并使用" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

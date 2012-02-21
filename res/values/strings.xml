@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">店连店</string>
+    <string name="title">店连店</string>
+    <string name="version">1.0</string>
+    <string name="store">商家</string>
+    <string name="coupon">优惠</string>
+    <string name="bank">卡优惠</string>
+    <string name="group">团购</string>
+    <string name="type">请选择搜索类型</string>
+    <string name="feedback">欢迎每个角儿都不吝留下宝贵意见和建议哦，您的满意是豆角不断的追求。</string>
+    <string name="searchfail">非常抱歉，我们会尽快收录您想要的优惠券，多谢您对豆角的支持，以下是给您的推荐！</string>
+    <string name="district">请选择商圈所在的区</string>
+    <string name="address">请选择商圈</string>
+    <string name="keyword">请选择分类</string>
+    <string name="more">" "<u>更多>></u>" "</string>
+    <string name="personal_increase">" "<u>如何增长</u>" "</string>
+    <string name="isregister">正在注册,请稍后!</string>
+    <string name="label_cancel">取消</string>
+    <string name="findpsw">正在找回密码请稍后!</string>
+    <string name="usenewaddress">" "<u>使用新地址</u>" "</string>
+    <string name="modify_city">" "<u>修改城市</u>" "</string>
+    <string name="addhostaddress">" "<u>添加收件人地址</u>" "</string>
+    <string name="edit_hostaddress">" "<u>编辑收件人地址</u>" "</string>
+    <string name="addnewbank">" "<u>增加新银行卡</u>" "</string>
+    <string name="edit_newbank">" "<u>编辑银行卡</u>" "</string>
+    <string name="confirm_install_hint">安装提示</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。
+
+点击确定，立即安装。"</string>
+</resources>

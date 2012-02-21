@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5.0dip"
+    android:paddingTop="3.0dip" >
+
+    <ImageView
+        android:id="@id/coupon_image"
+        android:layout_width="137.0dip"
+        android:layout_height="94.0dip"
+        android:layout_gravity="center"
+        android:background="@drawable/group_item"
+        android:padding="7.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/store" />
+
+    <TextView
+        android:id="@id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/coupon_image"
+        android:singleLine="true"
+        android:textColor="#ff5e950f"
+        android:textSize="18.0dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/website"
+        android:singleLine="true"
+        android:textColor="#fffb6f10"
+        android:textSize="18.0dip" />
+
+    <TextView
+        android:id="@id/yuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/price"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/price"
+        android:singleLine="true"
+        android:text="元"
+        android:textColor="#fffb6f10"
+        android:textSize="14.0dip" />
+
+    <TextView
+        android:id="@id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/price"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/yuan"
+        android:singleLine="true"
+        android:textColor="#ffb2b2b2"
+        android:textSize="14.0dip" />
+
+    <ImageView
+        android:id="@id/bought_image"
+        android:layout_width="12.0dip"
+        android:layout_height="11.0dip"
+        android:layout_alignLeft="@id/website"
+        android:layout_below="@id/website"
+        android:layout_marginTop="7.0dip"
+        android:src="@drawable/bought" />
+
+    <TextView
+        android:id="@id/bought"
+        android:layout_width="38.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bought_image"
+        android:layout_below="@id/website"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/bought_image"
+        android:textColor="#ff9a9a9a"
+        android:textSize="12.0dip" />
+
+    <ImageView
+        android:id="@id/distance_image"
+        android:layout_width="7.0dip"
+        android:layout_height="11.0dip"
+        android:layout_below="@id/website"
+        android:layout_marginTop="7.0dip"
+        android:layout_toRightOf="@id/bought"
+        android:src="@drawable/distance" />
+
+    <TextView
+        android:id="@id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bought_image"
+        android:layout_below="@id/website"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/distance_image"
+        android:textColor="#ff9a9a9a"
+        android:textSize="12.0dip" />
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bought_image"
+        android:layout_below="@id/bought_image"
+        android:layout_marginTop="4.0dip"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#ff555555"
+        android:textSize="15.0dip" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@id/single_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:ellipsize="end"
+        android:paddingBottom="2.0dip"
+        android:paddingLeft="6.0dip"
+        android:paddingTop="2.0dip"
+        android:singleLine="true"
+        android:textSize="20.0dip" />
+
+</RelativeLayout>
