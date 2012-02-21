@@ -22,7 +22,7 @@
             android:textColor="@color/white"
             android:textSize="20.0dip" />
 
-        <Button
+        <!-- Button
             android:id="@id/kuaican_top_btn"
             android:layout_width="70.0dip"
             android:layout_height="28.0dip"
@@ -34,7 +34,7 @@
             android:paddingBottom="3.0dip"
             android:text="快餐"
             android:textColor="@color/white"
-            android:textSize="14.0dip" />
+            android:textSize="14.0dip" /-->
 
         <Button
             android:id="@id/invite_top_btn"
@@ -44,9 +44,8 @@
             android:layout_marginLeft="10.0dip"
             android:layout_marginRight="10.0dip"
             android:layout_marginTop="4.0dip"
-            android:background="@drawable/choice_btn"
+            android:background="@drawable/switchcity"
             android:paddingBottom="3.0dip"
-            android:text="邀请好友"
             android:textColor="@color/white"
             android:textSize="14.0dip" />
     </RelativeLayout>
