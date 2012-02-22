@@ -37,7 +37,7 @@
             android:textSize="14.0dip" /-->
 
         <Button
-            android:id="@id/invite_top_btn"
+            android:id="@id/switchcity_top_btn"
             android:layout_width="70.0dip"
             android:layout_height="28.0dip"
             android:layout_alignParentRight="true"
