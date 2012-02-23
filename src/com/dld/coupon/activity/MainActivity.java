@@ -293,7 +293,7 @@ public class MainActivity extends TabActivity implements
         else
             localObject = new AlertDialog.Builder(this)
                     .setTitle("提示")
-                    .setMessage("是否退出打折店优惠？")
+                    .setMessage("是否退出店连店优惠？")
                     .setPositiveButton("确定",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(

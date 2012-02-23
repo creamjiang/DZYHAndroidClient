@@ -85,6 +85,7 @@ public class LogoActivity extends BaseActivity {
             }
 
             public void run() {
+            	/**
                  if (LogoActivity.this.firstRun)
                  ServiceUtil.show(new Runnable() {
                  public void run() {
@@ -94,7 +95,8 @@ public class LogoActivity extends BaseActivity {
                  else {
                  checkInit();
                  }
-                 nextActivity();
+                 **/
+            	checkInit();
             }
         }, 500);
         new Thread() {
