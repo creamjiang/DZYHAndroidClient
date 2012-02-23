@@ -15,6 +15,8 @@ import com.tencent.weibo.utils.Cache;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.text.BreakIterator;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
@@ -169,7 +171,11 @@ public class Protocol {
     }
 
     public Param getParam() {
-        return null;
+    	 if (this.param == null) {
+             this.param = new Param();
+             LogUtils.log("Protocol", "parame是空的");
+         }
+         return this.param;
     }
 
     public String getUrl() {
@@ -203,27 +209,40 @@ public class Protocol {
 
     public void startTrans(OnJsonProtocolResult paramOnJsonProtocolResult,
             int paramInt1, int paramInt2) {
-        String str = getUrl();
-        Object localObject = getParam().toString();
-        LogUtils.log("test", "url: " + str + (String) localObject);
-        LogUtils.log("test", "method: " + this.method);
-        if (paramOnJsonProtocolResult != null) {
-            this.onProtocolResult = paramOnJsonProtocolResult;
-            localObject = Cache.getCache(str + (String) localObject);
-            if ((localObject != null) && (this.cache))
-                ;
-        } else {
-            this.callback = getCallback();
-            LogUtils.log("Protocol", this.callback.custom + "/");
-            if (paramInt2 <= 0)
-                localObject = new HttpConfig(paramInt1);
-            else
-                localObject = new HttpConfig(paramInt1, paramInt2);
-            this.http = new Http(this.callback, (HttpConfig) localObject);
-            this.http.start();
-            return;
-        }
-        this.onProtocolResult.onResult(getAbsoluteUrl(), localObject);
+    	String str = getUrl();
+	    Object localObject = getParam().toString();
+	    LogUtils.log("test", "url: " + str + (String)localObject);
+	    LogUtils.log("test", "method: " + this.method);
+	    if (paramOnJsonProtocolResult != null)
+	    {
+	      this.onProtocolResult = paramOnJsonProtocolResult;
+	      localObject = Cache.getCache(str + (String)localObject);
+	      if ((localObject != null) && cache){ 
+	    	  this.onProtocolResult.onResult(getAbsoluteUrl(), localObject);
+	      }else {
+	    	  this.callback = getCallback();
+		      LogUtils.log("Protocol", this.callback.custom + "/");
+		      if (paramInt2 <= 0)
+		        localObject = new HttpConfig(paramInt1);
+		      else
+		        localObject = new HttpConfig(paramInt1, paramInt2);
+		      this.http = new Http(this.callback, (HttpConfig)localObject);
+		      this.http.start();
+		  }
+	    }
+	    else
+	    {
+	      this.callback = getCallback();
+	      LogUtils.log("Protocol", this.callback.custom + "/");
+	      if (paramInt2 <= 0)
+	        localObject = new HttpConfig(paramInt1);
+	      else
+	        localObject = new HttpConfig(paramInt1, paramInt2);
+	      this.http = new Http(this.callback, (HttpConfig)localObject);
+	      this.http.start();
+	    
+	    }
+	     //this.onProtocolResult.onResult(getAbsoluteUrl(), localObject);
     }
 
     public void startTransForResetPsw(

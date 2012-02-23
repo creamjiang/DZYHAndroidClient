@@ -73,14 +73,14 @@ public class LogoActivity extends BaseActivity {
       
         new Timer().schedule(new TimerTask() {
             private void checkInit() {
-                if (LogoActivity.this.inited) {
+               // if (LogoActivity.this.inited) {
                     if (!LogoActivity.this.firstRun)
                         return;
                     Intent localIntent = new Intent();
                     localIntent.setClass(LogoActivity.this, CityActivity.class);
                     LogoActivity.this.startActivityForResult(localIntent,
                             REQUEST_CODE_CHANGE_CITY);
-                }
+               // }
                 
             }
 
@@ -96,7 +96,7 @@ public class LogoActivity extends BaseActivity {
                  checkInit();
                  }
                  **/
-            	checkInit();
+            	nextActivity();
             }
         }, 500);
         new Thread() {

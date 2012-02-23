@@ -228,6 +228,7 @@ public class ProtocolHelper {
             int paramInt2, int paramInt3, String paramString1,
             String paramString2, double paramDouble1, double paramDouble2,
             int paramInt4, int paramInt5, int paramInt6) {
+    	/**
         String str1 = MapUtil.getCityId();
         String str2 = null;
         Object localObject = str1.substring(0, 2);
@@ -239,11 +240,17 @@ public class ProtocolHelper {
         if (paramString2 != null)
             str2 = str2 + ";address:" + paramString2;
         str2 = str2 + ";lat:" + paramDouble1 + ";lon:" + paramDouble2;
+        
         localObject = new Param().append("pn", String.valueOf(paramInt2))
                 .append("ps", String.valueOf(paramInt3))
                 .append("lpi", (String) localObject).append("q", str2)
                 .append("method", String.valueOf(paramInt4))
                 .append("customize", "1").append("sort", "3");
+                
+                **/
+    	Object localObject = new Param().append("categoryCode", paramString1)
+                .append("areaCode", paramString2);
+    	/**
         if (!str1.equals("00"))
             ((Param) localObject).append("lci", str1);
         if (paramInt5 > 0)
@@ -252,6 +259,9 @@ public class ProtocolHelper {
             ((Param) localObject).append("cat", String.valueOf(paramInt6));
         return (Protocol) new CProtocol(paramContext, null, "coupon",
                 (Param) localObject);
+        **/
+        return (Protocol) new CProtocol(paramContext, null, "discount",
+        	             (Param) localObject);
     }
 
     public static CProtocol registerRequest(Context paramContext,

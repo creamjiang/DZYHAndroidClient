@@ -65,8 +65,7 @@ public class BankCouponDetailActivity extends BaseActivity {
                     }
                     Param localParam = BankCouponDetailActivity.this.protocol
                             .getParam();
-                    // localParam.append("pi", 1 +
-                    // Integer.parseInt(localParam.get("pi")));
+                    localParam.append("pi", 1 +localParam.get("pi"));
                     localParam.append("pi", 1 + localParam.get("pi"));
                     BankCouponDetailActivity.this.protocol
                             .startTrans(new BankCouponDetailActivity.RecommendProtocolResult());

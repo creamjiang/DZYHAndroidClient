@@ -103,7 +103,7 @@ public class RecommendLinearLayout extends ListTab implements MainViewBase {
                         String paramString2, double paramDouble1,
                         double paramDouble2) {
                     return ProtocolHelper.recommendByCity(paramContext,
-                            paramInt1, paramInt2, 10, null, paramString2,
+                            paramInt1, paramInt2, 10, "102", "101120103",
                             RecommendLinearLayout.this.lat,
                             RecommendLinearLayout.this.lng, 1, 0, paramInt4);
                 }

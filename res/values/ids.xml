@@ -345,6 +345,8 @@
     <item type="id" name="allcontent">false</item>
     <item type="id" name="kuaican_top_btn">false</item>
     <item type="id" name="switchcity_top_btn">false</item>
+    <item type="id" name="back_top_btn">false</item>
+    <item type="id" name="aboutus_top_btn">false</item>
     <item type="id" name="search_bar">false</item>
     <item type="id" name="activities">false</item>
     <item type="id" name="categories">false</item>

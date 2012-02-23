@@ -162,7 +162,7 @@ public class CityActivity extends Activity {
             new Thread() {
                 public void run() {
                     CityActivity.this.initialData();
-                    CityActivity.this.handler.sendEmptyMessage(2);
+                    //CityActivity.this.handler.sendEmptyMessage(2);
                 }
             }.start();
         }

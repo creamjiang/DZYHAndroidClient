@@ -13,6 +13,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 public class CProtocol extends Protocol {
+	
+	private static final String BASE = "http://shenzhen.dld.com/www/?r=www/api/list&userAgent=dld_android&";
     private static final String ADDRESS = "http://www.dld.com/vlife/address?";
     private static final String ADD_NEWCOMMENT = "http://www.dld.com/customer/action/shr/add/v1";
     private static final String ALL_ORDERS = "http://www.dld.com/customer/action/order/all/v1/";
@@ -59,7 +61,7 @@ public class CProtocol extends Protocol {
     private static final String YINGLIANPAY = "http://www.dld.com/trade/action/pay/dna/v1?";
     private static final String ZHIFUBAO = "http://www.dld.com/trade/action/pay/ali/v1?";
     
-    private static final String DISCOUNT = "http://shenzhen.dld.com/www/?r=www/api/list&userAgent=dld_android&module=discount&&";
+    private static final String DISCOUNT = BASE+"module=discount&&pageSize=50&currentPage=1&";
 
     public CProtocol(Context paramContext, String paramString1,
             String paramString2, Param paramParam) {
@@ -100,7 +102,7 @@ public class CProtocol extends Protocol {
 
     public String getUrl() {
         String str;
-        if (!this.method.equals("coupon")) {
+        if (!this.method.equals("discount")) {
             if (!this.method.equals("group")) {
                 if (!this.method.equals("bank")) {
                     if (!this.method.equals("store")) {
@@ -181,7 +183,7 @@ public class CProtocol extends Protocol {
                                                                                                                                                                                             .equals("get_commentlist")) {
                                                                                                                                                                                         if (!this.method
                                                                                                                                                                                                 .equals("get_commentnew"))
-                                                                                                                                                                                            str = "http://www.dld.com/search/coupon?";
+                                                                                                                                                                                           str = DISCOUNT;
                                                                                                                                                                                         else
                                                                                                                                                                                             str = "http://www.dld.com/customer/action/shr/brief/v1//"
                                                                                                                                                                                                     + this.type
@@ -288,7 +290,7 @@ public class CProtocol extends Protocol {
             } else
                 str = "http://www.dld.com/search/deal?";
         } else
-            str = "http://www.dld.com/search/coupon?";
+        	str = DISCOUNT;
         return str;
     }
 

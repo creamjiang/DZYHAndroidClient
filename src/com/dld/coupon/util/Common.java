@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 
 public class Common {
     public static final String ABOUT = "关于";
-    public static final String ABOUT_MESSAGE = "打折店优惠\n\n版本 2.3\n\n网址: www.dld.com";
+    public static final String ABOUT_MESSAGE = "店连店优惠\n\n版本 2.3\n\n网址: www.dld.com";
     public static final String CARD = "我的卡";
     public static final String CITY_SETTING = "城市设置";
     public static final String CLEAR = "清除缓存";

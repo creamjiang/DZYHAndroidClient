@@ -192,7 +192,7 @@ public abstract class BaseActivity extends Activity {
             break;
         case 3:
             localObject = new Intent("android.intent.action.DIAL");
-            ((Intent) localObject).setData(Uri.parse("tel:4006266868"));
+            ((Intent) localObject).setData(Uri.parse("tel:4000088114"));
             ActivityManager.getCurrent().startActivity((Intent) localObject);
             break;
         case 4:
@@ -205,7 +205,7 @@ public abstract class BaseActivity extends Activity {
             Builder dialog = new AlertDialog.Builder(
                     ActivityManager.getCurrent());
             dialog.setTitle("关于");
-            dialog.setMessage("打折店优惠\n\n版本 2.3\n\n网址: www.dld.com");
+            dialog.setMessage("店连店\n\n版本 2.3\n\n网址: www.dld.com");
             dialog.setPositiveButton("返回",
                     new DialogInterface.OnClickListener() {
                         public void onClick(

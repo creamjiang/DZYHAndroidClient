@@ -42,7 +42,7 @@ public class Param implements Serializable {
         Iterator localIterator = this.map.entrySet().iterator();
         while (true) {
             if (!localIterator.hasNext()) {
-                localStringBuilder.append("&ver=4&cv=A22");
+                //localStringBuilder.append("&ver=4&cv=A22");
                 return localStringBuilder.toString();
             }
             Object localObject = (Map.Entry) localIterator.next();

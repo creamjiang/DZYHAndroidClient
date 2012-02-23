@@ -863,6 +863,8 @@
     <public id="0x7f0c0157" name="kuaican_top_btn" type="id" />
     <public id="0x7f0c0158" name="switchcity_top_btn" type="id" />
     <public id="0x7f0c0159" name="search_bar" type="id" />
+    <public id="0x7f0c0197" name="back_top_btn" type="id" />
+    <public id="0x7f0c0198" name="aboutus_top_btn" type="id" />
     <public id="0x7f0c015a" name="activities" type="id" />
     <public id="0x7f0c015b" name="categories" type="id" />
     <public id="0x7f0c015c" name="hot_addresses" type="id" />

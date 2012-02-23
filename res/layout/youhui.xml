@@ -18,9 +18,34 @@
             android:layout_marginTop="7.0dip"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="优惠"
+            android:text="爱打折"
             android:textColor="@color/white"
             android:textSize="20.0dip" />
+          <Button
+            android:id="@id/back_top_btn"
+            android:layout_width="70.0dip"
+            android:layout_height="28.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/back"
+            android:paddingBottom="3.0dip"
+            android:textColor="@color/white"
+            android:textSize="14.0dip" />
+
+        <Button
+            android:id="@id/aboutus_top_btn"
+            android:layout_width="70.0dip"
+            android:layout_height="28.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/aboutus"
+            android:paddingBottom="3.0dip"
+            android:textColor="@color/white"
+            android:textSize="14.0dip" />
     </RelativeLayout>
 
     <include
