@@ -140,14 +140,14 @@ public class SearchActivity extends BaseActivity {
         initActivities();
         ((TextView) findViewById(R.id.title_text)).setText("首页-"
                 + MapUtil.getCity());
-        ((Button) findViewById(R.id.invite_top_btn))
+        ((Button) findViewById(R.id.switchcity_top_btn))
                 .setOnClickListener(new View.OnClickListener() {
                     public void onClick(View paramView) {
-                        if (!StringUtils.isEmpty(SharePersistent
-                                .get("customer_id")))
-                            Common.startActivity(InviteActivity.class);
-                        else
-                            Common.startActivity(LoginActivity.class);
+                       // if (!StringUtils.isEmpty(SharePersistent.get("customer_id")))
+                            //Common.startActivity(InviteActivity.class);
+                        	Common.startActivity(CityActivity.class);
+                       // else
+                       //     Common.startActivity(LoginActivity.class);
                     }
                 });
     }

@@ -861,7 +861,7 @@
     <public id="0x7f0c0155" name="storecontent" type="id" />
     <public id="0x7f0c0156" name="allcontent" type="id" />
     <public id="0x7f0c0157" name="kuaican_top_btn" type="id" />
-    <public id="0x7f0c0158" name="invite_top_btn" type="id" />
+    <public id="0x7f0c0158" name="switchcity_top_btn" type="id" />
     <public id="0x7f0c0159" name="search_bar" type="id" />
     <public id="0x7f0c015a" name="activities" type="id" />
     <public id="0x7f0c015b" name="categories" type="id" />
