@@ -192,8 +192,3 @@ public class RegisterActivity extends BaseActivity implements
         }
     }
 }
-
-/*
- * Location: G:\DEV\MobileDev\反编译\classes_dex2jar\ Qualified Name:
- * com.dld.coupon.activity.RegisterActivity JD-Core Version: 0.6.0
- */

@@ -52,7 +52,7 @@ import com.dld.coupon.activity.R;
 import com.tencent.weibo.utils.Cache;
 import java.util.List;
 
-public class MyDoujiaoActivity extends BaseActivity implements Showable {
+public class MyDldActivity extends BaseActivity implements Showable {
     private static final String[] operations;
     private DownloadListView.DownLoadAdapter adapter;
     private Orders allOrders = new Orders();
@@ -128,7 +128,7 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                         new AlertDialog.Builder(ActivityManager.getCurrent())
                                 .setTitle("请选择要执行的操作")
                                 .setSingleChoiceItems(
-                                        MyDoujiaoActivity.operations, 0,
+                                        MyDldActivity.operations, 0,
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(
                                                     DialogInterface paramDialogInterface,
@@ -281,13 +281,13 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                                                             .deleteFav(localDetailRef.detail
                                                                     .getDBId());
                                                     if ((i != 1) && (i != 0))
-                                                        MyDoujiaoActivity.this
+                                                        MyDldActivity.this
                                                                 .onShowMyFav(i);
                                                     else
-                                                        MyDoujiaoActivity.this
+                                                        MyDldActivity.this
                                                                 .onShowMyFav(0);
                                                 } else {
-                                                    MyDoujiaoActivity.this
+                                                    MyDldActivity.this
                                                             .browse(bean,
                                                                     paramInt);
                                                 }
@@ -301,7 +301,7 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                 .setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> paramAdapterView,
                             View paramView, int paramInt, long paramLong) {
-                        MyDoujiaoActivity.this.browse(bean, paramInt);
+                        MyDldActivity.this.browse(bean, paramInt);
                     }
                 });
     }
@@ -372,22 +372,22 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
         this.bankTextV = ((TextView) findViewById(R.id.banktv));
         this.groupLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View paramView) {
-                MyDoujiaoActivity.this.onShowMyFav(2);
+                MyDldActivity.this.onShowMyFav(2);
             }
         });
         this.youhuiLaout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View paramView) {
-                MyDoujiaoActivity.this.onShowMyFav(4);
+                MyDldActivity.this.onShowMyFav(4);
             }
         });
         this.storeLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View paramView) {
-                MyDoujiaoActivity.this.onShowMyFav(0);
+                MyDldActivity.this.onShowMyFav(0);
             }
         });
         this.bankLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View paramView) {
-                MyDoujiaoActivity.this.onShowMyFav(3);
+                MyDldActivity.this.onShowMyFav(3);
             }
         });
     }
@@ -396,7 +396,7 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
         if (!StringUtils.isEmpty(SharePersistent.get("customer_id"))) {
             this.handler.post(new Runnable() {
                 public void run() {
-                    MyDoujiaoActivity.this.findViewById(R.id.orderlayout)
+                    MyDldActivity.this.findViewById(R.id.orderlayout)
                             .findViewById(R.id.no_result).setVisibility(8);
                 }
             });
@@ -430,7 +430,7 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                     .startTrans(new Protocol.OnJsonProtocolResult() {
                         public void onException(String paramString,
                                 Exception paramException) {
-                            MyDoujiaoActivity.this.handler.post(new Runnable() {
+                            MyDldActivity.this.handler.post(new Runnable() {
                                 public void run() {
                                     localDownLoadAdapter.notifyException();
                                 }
@@ -442,12 +442,12 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                             if (paramObject != null) {
                                 final Object localObject = (Orders) paramObject;
                                 if (!((Orders) localObject).list.isEmpty()) {
-                                    MyDoujiaoActivity.this.handler
+                                    MyDldActivity.this.handler
                                             .post(new Runnable() {
                                                 public void run() {
                                                     if (((Orders) localObject).list
                                                             .containsAll(allOrders.list)) {
-                                                        MyDoujiaoActivity.this
+                                                        MyDldActivity.this
                                                                 .showResult();
                                                     } else {
                                                         ((Orders) localObject).total = allOrders.total;
@@ -455,34 +455,34 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                                                                 .addAll(allOrders.list);
                                                         localDownLoadAdapter
                                                                 .notifyDownloadBack();
-                                                        MyDoujiaoActivity.this.total.setText(Html
-                                                                .fromHtml(MyDoujiaoActivity.this.labels[0]
+                                                        MyDldActivity.this.total.setText(Html
+                                                                .fromHtml(MyDldActivity.this.labels[0]
                                                                         + "：<font color='#f28100'>"
-                                                                        + MyDoujiaoActivity.this.allOrders.total
+                                                                        + MyDldActivity.this.allOrders.total
                                                                         + "</font>笔　　"
-                                                                        + MyDoujiaoActivity.this.labels[1]
+                                                                        + MyDldActivity.this.labels[1]
                                                                         + "：<font color='#f28100'>"
-                                                                        + MyDoujiaoActivity.this.unpaidOrders.total
+                                                                        + MyDldActivity.this.unpaidOrders.total
                                                                         + "</font>笔"));
-                                                        MyDoujiaoActivity.this
+                                                        MyDldActivity.this
                                                                 .showResult();
                                                     }
                                                 }
                                             });
                                 } else {
-                                    boolean[] local = MyDoujiaoActivity.this.noresultFlags;
+                                    boolean[] local = MyDldActivity.this.noresultFlags;
                                     int i;
                                     if (!isFirst)
                                         i = 1;
                                     else
                                         i = 0;
                                     local[i] = true;
-                                    if (((isFirst) && (MyDoujiaoActivity.this.showingTab == 1))
-                                            || ((!isFirst) && (MyDoujiaoActivity.this.showingTab == 2)))
-                                        MyDoujiaoActivity.this.showNoResult();
+                                    if (((isFirst) && (MyDldActivity.this.showingTab == 1))
+                                            || ((!isFirst) && (MyDldActivity.this.showingTab == 2)))
+                                        MyDldActivity.this.showNoResult();
                                 }
                             } else {
-                                MyDoujiaoActivity.this.handler
+                                MyDldActivity.this.handler
                                         .post(new Runnable() {
                                             public void run() {
                                                 allOrdersAdapter
@@ -509,20 +509,20 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
     private void showNoResult() {
         this.handler.post(new Runnable() {
             public void run() {
-                MyDoujiaoActivity.this.findViewById(R.id.orderlayout)
+                MyDldActivity.this.findViewById(R.id.orderlayout)
                         .findViewById(R.id.no_result).setVisibility(0);
-                ImageView localImageView = (ImageView) MyDoujiaoActivity.this
+                ImageView localImageView = (ImageView) MyDldActivity.this
                         .findViewById(R.id.orderlayout).findViewById(
                                 R.id.no_result);
                 if (!StringUtils.isEmpty(SharePersistent.get("customer_id"))) {
                     localImageView.setImageResource(R.drawable.no_result);
-                    MyDoujiaoActivity.this.login_btnOrder.setVisibility(8);
+                    MyDldActivity.this.login_btnOrder.setVisibility(8);
                 } else {
                     localImageView.setImageResource(R.drawable.unlogintip);
-                    MyDoujiaoActivity.this.login_btnOrder.setVisibility(0);
+                    MyDldActivity.this.login_btnOrder.setVisibility(0);
                 }
-                MyDoujiaoActivity.this.allOrdersListView.setVisibility(8);
-                MyDoujiaoActivity.this.unpaidOrdersListView.setVisibility(8);
+                MyDldActivity.this.allOrdersListView.setVisibility(8);
+                MyDldActivity.this.unpaidOrdersListView.setVisibility(8);
             }
         });
     }
@@ -530,24 +530,24 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
     private void showResult() {
         this.handler.post(new Runnable() {
             public void run() {
-                MyDoujiaoActivity.this.findViewById(R.id.orderlayout)
+                MyDldActivity.this.findViewById(R.id.orderlayout)
                         .findViewById(R.id.no_result).setVisibility(8);
-                MyDoujiaoActivity.this.findViewById(R.id.orderlayout)
+                MyDldActivity.this.findViewById(R.id.orderlayout)
                         .findViewById(R.id.login_btn).setVisibility(8);
-                if (MyDoujiaoActivity.this.showingTab != 1) {
-                    if (MyDoujiaoActivity.this.showingTab == 2)
-                        MyDoujiaoActivity.this.unpaidOrdersListView
+                if (MyDldActivity.this.showingTab != 1) {
+                    if (MyDldActivity.this.showingTab == 2)
+                        MyDldActivity.this.unpaidOrdersListView
                                 .setVisibility(0);
                 } else
-                    MyDoujiaoActivity.this.allOrdersListView.setVisibility(0);
-                MyDoujiaoActivity.this.total.setText(Html
-                        .fromHtml(MyDoujiaoActivity.this.labels[0]
+                    MyDldActivity.this.allOrdersListView.setVisibility(0);
+                MyDldActivity.this.total.setText(Html
+                        .fromHtml(MyDldActivity.this.labels[0]
                                 + "：<font color='#f28100'>"
-                                + MyDoujiaoActivity.this.allOrders.total
+                                + MyDldActivity.this.allOrders.total
                                 + "</font>笔　　"
-                                + MyDoujiaoActivity.this.labels[1]
+                                + MyDldActivity.this.labels[1]
                                 + "：<font color='#f28100'>"
-                                + MyDoujiaoActivity.this.unpaidOrders.total
+                                + MyDldActivity.this.unpaidOrders.total
                                 + "</font>笔"));
             }
         });
@@ -630,7 +630,7 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
     }
 
     protected String getTitleString() {
-        return "打折店-我的订单";
+        return "店连店-我的订单";
     }
 
     public void init() {
@@ -642,63 +642,67 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        setContentView(R.layout.mydoujiao);
+        setContentView(R.layout.mydld);
         regReceiver();
         this.orderLayout = ((LinearLayout) findViewById(R.id.orderlayout));
         this.favLayout = ((LinearLayout) findViewById(R.id.favlayout));
         this.changeButton = ((Button) findViewById(R.id.feedback_button));
         this.topTextView = ((TextView) findViewById(R.id.title_text));
         this.setButton = ((Button) findViewById(R.id.set_button));
+        
         this.setButton.setVisibility(0);
         if (this.isFirst) {
             this.login_btnFav = ((Button) this.favLayout
                     .findViewById(R.id.login_btn));
             this.login_btnFav.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View paramView) {
-                    Intent localIntent = new Intent(MyDoujiaoActivity.this,
+                    Intent localIntent = new Intent(MyDldActivity.this,
                             LoginActivity.class);
-                    Cache.put("mydoujiaoshow", "mydoujiaoshow");
-                    MyDoujiaoActivity.this.startActivity(localIntent);
+                    Cache.put("mydldshow", "mydldshow");
+                    MyDldActivity.this.startActivity(localIntent);
                 }
             });
             this.login_btnOrder = ((Button) this.orderLayout
                     .findViewById(R.id.login_btn));
             this.login_btnOrder.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View paramView) {
-                    Intent localIntent = new Intent(MyDoujiaoActivity.this,
+                    Intent localIntent = new Intent(MyDldActivity.this,
                             LoginActivity.class);
-                    Cache.put("mydoujiaoshow", "mydoujiaoshow");
-                    MyDoujiaoActivity.this.startActivity(localIntent);
+                    Cache.put("mydldshow", "mydldshow");
+                    MyDldActivity.this.startActivity(localIntent);
                 }
             });
+           
             this.setButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View paramView) {
-                    Intent localIntent = new Intent(MyDoujiaoActivity.this,
-                            MydoujiaoSettingActivity.class);
-                    MyDoujiaoActivity.this.startActivity(localIntent);
+                    Intent localIntent = new Intent(MyDldActivity.this,
+                    		MyDldSettingActivity.class);
+                    MyDldActivity.this.startActivity(localIntent);
                 }
             });
+            
             this.changeButton.setVisibility(0);
             this.changeButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View paramView) {
-                    if (MyDoujiaoActivity.this.flag != 1) {
-                        MyDoujiaoActivity.this.changeButton.setText("我的收藏");
-                        MyDoujiaoActivity.this.topTextView.setText("我的订单");
-                        MyDoujiaoActivity.this.favLayout.setVisibility(8);
-                        MyDoujiaoActivity.this.orderLayout.setVisibility(0);
-                        MyDoujiaoActivity.this.initOrderUI();
-                        MyDoujiaoActivity.this.flag = 1;
+                    if (MyDldActivity.this.flag != 1) {
+                        MyDldActivity.this.changeButton.setText("我的收藏");
+                        MyDldActivity.this.topTextView.setText("我的订单");
+                        MyDldActivity.this.favLayout.setVisibility(8);
+                        MyDldActivity.this.orderLayout.setVisibility(0);
+                        MyDldActivity.this.initOrderUI();
+                        MyDldActivity.this.flag = 1;
                     } else {
-                        MyDoujiaoActivity.this.favLayout.setVisibility(0);
-                        MyDoujiaoActivity.this.orderLayout.setVisibility(8);
-                        MyDoujiaoActivity.this.initMyFavUI();
-                        MyDoujiaoActivity.this.topTextView.setText("我的收藏");
-                        MyDoujiaoActivity.this.flag = 2;
-                        MyDoujiaoActivity.this.changeButton.setText("我的订单");
+                        MyDldActivity.this.favLayout.setVisibility(0);
+                        MyDldActivity.this.orderLayout.setVisibility(8);
+                        MyDldActivity.this.initMyFavUI();
+                        MyDldActivity.this.topTextView.setText("我的收藏");
+                        MyDldActivity.this.flag = 2;
+                        MyDldActivity.this.changeButton.setText("我的订单");
                     }
                 }
             });
         }
+        
         if (this.flag != 1) {
             this.topTextView.setText("我的收藏");
             this.changeButton.setText("我的订单");
@@ -898,18 +902,18 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
             this.all = bool;
             Orders localOrders;
             if (!bool)
-                localOrders = MyDoujiaoActivity.this.unpaidOrders;
+                localOrders = MyDldActivity.this.unpaidOrders;
             else
-                localOrders = MyDoujiaoActivity.this.allOrders;
+                localOrders = MyDldActivity.this.allOrders;
             this.orders = localOrders;
         }
 
         public Context getContext() {
-            return MyDoujiaoActivity.this;
+            return MyDldActivity.this;
         }
 
         public Object getItem(int paramInt) {
-            return MyDoujiaoActivity.this.allOrders.list.get(paramInt);
+            return MyDldActivity.this.allOrders.list.get(paramInt);
         }
 
         public long getItemId(int paramInt) {
@@ -929,12 +933,12 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
                     .get(paramInt);
             LayoutInflater localLayoutInflater = (LayoutInflater) getContext()
                     .getSystemService("layout_inflater");
-            return MyDoujiaoActivity.this.getItemView(localLayoutInflater,
+            return MyDldActivity.this.getItemView(localLayoutInflater,
                     localOrdersItem, this.all);
         }
 
         public void onNotifyDownload() {
-            MyDoujiaoActivity.this.loadOrders(1 + this.orders.list.size() / 5,
+            MyDldActivity.this.loadOrders(1 + this.orders.list.size() / 5,
                     this.all);
         }
     }
@@ -945,13 +949,13 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
         }
 
         public Context getContext() {
-            return MyDoujiaoActivity.this;
+            return MyDldActivity.this;
         }
 
         public void onNotifyDownload() {
-            MyDoujiaoActivity.this.handler.post(new Runnable() {
+            MyDldActivity.this.handler.post(new Runnable() {
                 public void run() {
-                    MyDoujiaoActivity.this.onShowMyFav(4);
+                    MyDldActivity.this.onShowMyFav(4);
                 }
             });
         }
@@ -962,18 +966,18 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
         }
 
         public void onClick(View paramView) {
-            MyDoujiaoActivity.this.showingTab = 1;
-            MyDoujiaoActivity.this.allOrdersTab
+            MyDldActivity.this.showingTab = 1;
+            MyDldActivity.this.allOrdersTab
                     .setBackgroundResource(R.drawable.tab_selected);
-            MyDoujiaoActivity.this.unpaidOrdersTab
+            MyDldActivity.this.unpaidOrdersTab
                     .setBackgroundResource(R.drawable.tab_unselected);
-            if (MyDoujiaoActivity.this.noresultFlags[0] == false) {
-                MyDoujiaoActivity.this.findViewById(R.id.orderlayout)
+            if (MyDldActivity.this.noresultFlags[0] == false) {
+                MyDldActivity.this.findViewById(R.id.orderlayout)
                         .findViewById(R.id.no_result).setVisibility(8);
-                MyDoujiaoActivity.this.unpaidOrdersListView.setVisibility(8);
-                MyDoujiaoActivity.this.allOrdersListView.setVisibility(0);
+                MyDldActivity.this.unpaidOrdersListView.setVisibility(8);
+                MyDldActivity.this.allOrdersListView.setVisibility(0);
             } else {
-                MyDoujiaoActivity.this.showNoResult();
+                MyDldActivity.this.showNoResult();
             }
         }
     }
@@ -983,18 +987,18 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
         }
 
         public void onClick(View paramView) {
-            MyDoujiaoActivity.this.showingTab = 2;
-            MyDoujiaoActivity.this.allOrdersTab
+            MyDldActivity.this.showingTab = 2;
+            MyDldActivity.this.allOrdersTab
                     .setBackgroundResource(R.drawable.tab_unselected);
-            MyDoujiaoActivity.this.unpaidOrdersTab
+            MyDldActivity.this.unpaidOrdersTab
                     .setBackgroundResource(R.drawable.tab_selected);
-            if (MyDoujiaoActivity.this.noresultFlags[1] == true) {
-                MyDoujiaoActivity.this.findViewById(R.id.orderlayout)
+            if (MyDldActivity.this.noresultFlags[1] == true) {
+                MyDldActivity.this.findViewById(R.id.orderlayout)
                         .findViewById(R.id.no_result).setVisibility(8);
-                MyDoujiaoActivity.this.allOrdersListView.setVisibility(8);
-                MyDoujiaoActivity.this.unpaidOrdersListView.setVisibility(0);
+                MyDldActivity.this.allOrdersListView.setVisibility(8);
+                MyDldActivity.this.unpaidOrdersListView.setVisibility(0);
             } else {
-                MyDoujiaoActivity.this.showNoResult();
+                MyDldActivity.this.showNoResult();
             }
         }
     }
@@ -1004,7 +1008,7 @@ public class MyDoujiaoActivity extends BaseActivity implements Showable {
         }
 
         public void onReceive(Context paramContext, Intent paramIntent) {
-            MyDoujiaoActivity.this.LogOff();
+            MyDldActivity.this.LogOff();
         }
     }
 }

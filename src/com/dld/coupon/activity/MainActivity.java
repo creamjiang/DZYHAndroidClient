@@ -187,7 +187,7 @@ public class MainActivity extends TabActivity implements
         this.discountTabSpec.setContent(new Intent(this, YouhuiActivity.class));
         this.shoppingTabSpec.setContent(new Intent(this, GroupActivity.class));
         this.cheapskateCardTabSpec.setContent(new Intent(this,
-                MyDoujiaoActivity.class));
+        		MyDldActivity.class));
         this.tabHost.addTab(this.indexTabSpec);
         this.tabHost.addTab(this.aroundTabSpec);
         this.tabHost.addTab(this.discountTabSpec);

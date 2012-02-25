@@ -377,8 +377,8 @@
     <public id="0x7f030045" name="more" type="layout" />
     <public id="0x7f030046" name="more_item_layout" type="layout" />
     <public id="0x7f030047" name="my_spinner_textview" type="layout" />
-    <public id="0x7f030048" name="mydoujiao" type="layout" />
-    <public id="0x7f030049" name="mydoujiaosetting" type="layout" />
+    <public id="0x7f030048" name="mydld" type="layout" />
+    <public id="0x7f030049" name="mydldsetting" type="layout" />
     <public id="0x7f03004a" name="myfav_view" type="layout" />
     <public id="0x7f03004b" name="nested_listview" type="layout" />
     <public id="0x7f03004c" name="no_result_list" type="layout" />

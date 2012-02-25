@@ -48,7 +48,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class MydoujiaoSettingActivity extends BaseActivity implements
+public class MyDldSettingActivity extends BaseActivity implements
         View.OnClickListener {
     private final int SYNFAV_FAILURE = 2;
     private final int SYNFAV_SUCCESS = 1;
@@ -69,7 +69,7 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
             while (true) {
                 // return;
                 try {
-                    MydoujiaoSettingActivity.this.pdd.dismiss();
+                    MyDldSettingActivity.this.pdd.dismiss();
                     new AlertDialog.Builder(ActivityManager.getCurrent())
                             .setTitle("提示")
                             .setMessage("恭喜您，已成功将收藏同步到您的手机!")
@@ -85,9 +85,9 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                 continue;
                 // try
                 // {
-                // MydoujiaoSettingActivity.this.pdd.dismiss();
+                // MyCardSettingActivity.this.pdd.dismiss();
                 // new
-                // AlertDialog.Builder(MydoujiaoSettingActivity.this).setTitle("提示").setMessage("抱歉,收藏同步到手机失败,请您稍候再试!").setPositiveButton("确定",
+                // AlertDialog.Builder(MyCardSettingActivity.this).setTitle("提示").setMessage("抱歉,收藏同步到手机失败,请您稍候再试!").setPositiveButton("确定",
                 // new DialogInterface.OnClickListener()
                 // {
                 // public void onClick(DialogInterface paramDialogInterface, int
@@ -141,7 +141,7 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                             CompoundButton paramCompoundButton,
                             boolean paramBoolean) {
                         SharePersistent.getInstance().savePerference(
-                                MydoujiaoSettingActivity.this,
+                                MyDldSettingActivity.this,
                                 "isallowsendweibo", paramBoolean);
                     }
                 });
@@ -149,15 +149,15 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
         this.syn_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View paramView) {
                 final String str = SharePersistent.getInstance().getPerference(
-                        MydoujiaoSettingActivity.this, "customer_id");
+                        MyDldSettingActivity.this, "customer_id");
                 if (StringUtils.isEmpty(str))
-                    Toast.makeText(MydoujiaoSettingActivity.this,
+                    Toast.makeText(MyDldSettingActivity.this,
                             "您还没有登录，请登录后同步!", 1).show();
                 // while (true)
                 {
                     // return;
                     try {
-                        MydoujiaoSettingActivity.this.pdd.show();
+                        MyDldSettingActivity.this.pdd.show();
                         new Thread(new Runnable() {
                             public void run() {
                                 Object localObject = GenericDAO.getInstance();
@@ -186,15 +186,15 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                                         + localParam.toStringfrome());
                                 ProtocolHelper
                                         .synchroFavRequest(
-                                                MydoujiaoSettingActivity.this,
+                                                MyDldSettingActivity.this,
                                                 localParam, false)
                                         .startTransForUser(
-                                                new MydoujiaoSettingActivity.CommonFavResult(),
+                                                new MyDldSettingActivity.CommonFavResult(),
                                                 localParam);
                             }
                         }).start();
                     } catch (Exception localException) {
-                        MydoujiaoSettingActivity.this.synHandler
+                        MyDldSettingActivity.this.synHandler
                                 .sendEmptyMessage(2);
                     }
                 }
@@ -254,7 +254,7 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        setContentView(R.layout.mydoujiaosetting);
+        setContentView(R.layout.mydldsetting);
         initWidget();
         initSegment();
     }
@@ -266,7 +266,7 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
 
         public void onException(String paramString, Exception paramException) {
             LogUtils.log("main", "on result for syn exception");
-            MydoujiaoSettingActivity.this.synHandler.sendEmptyMessage(2);
+            MyDldSettingActivity.this.synHandler.sendEmptyMessage(2);
         }
 
         public void onResult(String paramString, Object paramObject) {
@@ -277,7 +277,7 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                 LogUtils.log("main", ((List) localObject5).size()
                         + "/// deleteList size");
                 localObject1 = GenericDAO
-                        .getInstance(MydoujiaoSettingActivity.this);
+                        .getInstance(MyDldSettingActivity.this);
                 Object localObject3 = (HashMap) ((GenericDAO) localObject1)
                         .listAsMap();
                 LogUtils.log("main", ((HashMap) localObject3).entrySet().size()
@@ -329,7 +329,7 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                             while (localIterator.hasNext()) {
                                 Object localObject = (Ticket) localIterator
                                         .next();
-                                MydoujiaoSettingActivity localMydoujiaoSettingActivity = MydoujiaoSettingActivity.this;
+                                MyDldSettingActivity localMyCardSettingActivity = MyDldSettingActivity.this;
                                 String str2 = "http://www.dld.com/vlife/image?id="
                                         + ((Ticket) localObject).id;
                                 String str1 = "http://www.dld.com/tuan/viewimage?u="
@@ -338,9 +338,9 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                                 localObject = "http://www.dld.com/tuan/viewimage?u="
                                         + URLEncoder.encode(str2)
                                         + "&w=600&h=600";
-                                readData(localMydoujiaoSettingActivity, str2,
+                                readData(localMyCardSettingActivity, str2,
                                         str1);
-                                readData(localMydoujiaoSettingActivity, str2,
+                                readData(localMyCardSettingActivity, str2,
                                         (String) localObject);
                                 FileUtil.saveTicketImage(str2);
                             }
@@ -448,9 +448,9 @@ public class MydoujiaoSettingActivity extends BaseActivity implements
                             }
                         }
                     }.start();
-                    MydoujiaoSettingActivity.this.handler.post(new Runnable() {
+                    MyDldSettingActivity.this.handler.post(new Runnable() {
                         public void run() {
-                            MydoujiaoSettingActivity.this.synHandler
+                            MyDldSettingActivity.this.synHandler
                                     .sendEmptyMessage(1);
                         }
                     });

@@ -168,8 +168,7 @@ public abstract class BaseActivity extends Activity {
         Object localObject = new Intent();
         switch (paramMenuItem.getItemId()) {
         case 0:
-            startActivity(new Intent(ActivityManager.getCurrent(),
-                    MydoujiaoSettingActivity.class));
+            startActivity(new Intent(ActivityManager.getCurrent(),MyDldSettingActivity.class));
             break;
         case 1:
             ((Intent) localObject).setClass(ActivityManager.getCurrent(),

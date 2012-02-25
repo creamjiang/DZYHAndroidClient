@@ -10,8 +10,8 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-
-        <include
+        
+         <include
             android:id="@id/favlayout"
             layout="@layout/myfav_view" />
 
@@ -19,6 +19,7 @@
             android:id="@id/orderlayout"
             layout="@layout/orders"
             android:visibility="gone" />
+
     </RelativeLayout>
 
 </LinearLayout>
