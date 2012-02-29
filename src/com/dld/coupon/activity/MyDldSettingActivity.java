@@ -235,7 +235,7 @@ public class MyDldSettingActivity extends BaseActivity implements
             localObject = new AlertDialog.Builder(this);
             ((AlertDialog.Builder) localObject).setTitle("关于");
             ((AlertDialog.Builder) localObject)
-                    .setMessage("打折店优惠\n\n版本 2.3\n\n网址: www.dld.com");
+                    .setMessage("打折店优惠\n\n版本 1.0\n\n网址: www.dld.com");
             ((AlertDialog.Builder) localObject).setPositiveButton("返回",
                     new DialogInterface.OnClickListener() {
                         public void onClick(

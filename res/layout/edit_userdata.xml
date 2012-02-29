@@ -46,7 +46,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10.0dip"
-                android:text="您好!欢迎来到豆角,完善资料可获得100积分哦!"
+                android:text="您好!欢迎来到店连店,完善资料可获得100积分哦!"
                 android:textColor="#ff666666"
                 android:textSize="18.0sp" />
 

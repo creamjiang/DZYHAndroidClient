@@ -204,7 +204,7 @@ public abstract class BaseActivity extends Activity {
             Builder dialog = new AlertDialog.Builder(
                     ActivityManager.getCurrent());
             dialog.setTitle("关于");
-            dialog.setMessage("店连店\n\n版本 2.3\n\n网址: www.dld.com");
+            dialog.setMessage("店连店\n\n版本 1.0\n\n网址: www.dld.com");
             dialog.setPositiveButton("返回",
                     new DialogInterface.OnClickListener() {
                         public void onClick(
